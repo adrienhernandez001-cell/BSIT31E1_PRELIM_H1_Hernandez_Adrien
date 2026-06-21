@@ -19,7 +19,7 @@ namespace StudentManagementSystem
 
         public StudentManager()
         {
-            studentNames = new List<string>();
+            studentNames = new List<string>(); 
             studentGrades = new List<int[]>();
         }
 
@@ -76,8 +76,14 @@ namespace StudentManagementSystem
             Console.Write("Enter student name: ");
             string name = Console.ReadLine();
 
+            int grade1;
+
             Console.Write("Enter grade 1: ");
-            int grade1 = int.Parse(Console.ReadLine());
+
+            while (!int.TryParse(Console.ReadLine(), out grade1))
+            {
+                Console.Write("Invalid input. Enter a number: ");
+            }
 
             Console.Write("Enter grade 2: ");
             int grade2 = int.Parse(Console.ReadLine());
