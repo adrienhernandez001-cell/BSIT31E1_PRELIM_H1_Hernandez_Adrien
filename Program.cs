@@ -94,7 +94,7 @@ namespace StudentManagementSystem
             studentNames.Add(name);
             studentGrades.Add(new int[] { grade1, grade2, grade3 });
 
-            Console.WriteLine("Student added successfully!");
+            Console.WriteLine("Student record added successfully!");
         }
 
         public void ViewStudents()
